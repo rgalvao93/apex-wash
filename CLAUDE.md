@@ -39,6 +39,18 @@ Do site atual, reaproveitar **apenas os textos/conteúdo**, não o layout ou vis
 - Design deve ser original e melhorado em relação ao site atual — não copiar o visual do Google Sites.
 - Extrair textos do site atual como referência de conteúdo (não fazer scraping automatizado sem antes revisar com o usuário).
 - Manter HTML semântico e acessível (facilita SEO e leitores de tela).
+- **Qualquer trabalho de design (layout, paleta, tipografia, componentes novos) deve usar a skill `frontend-design`.**
+
+## Paleta de marca
+
+Extraída do logo oficial da Apex Wash (selo circular, fundo branco, texto preto):
+
+- Azul (cor dominante do selo e do ícone do sofá): `#1B6FB0` (uso funcional/texto), `#2A9BE0` (tom decorativo mais claro)
+- Dourado: `#E2960A` (funcional), `#FAAA14` (decorativo)
+- Vermelho: `#D6461C`
+- Verde: `#2F8A16`
+
+O selo original em si (clip-art com ícones de limpeza — spray, aspirador, rodo, escova) **não deve ser usado como imagem no layout** — destoa do sistema visual mais editorial do site. Usar apenas as cores extraídas dele; o wordmark/ícone do cabeçalho é uma peça nova, desenhada para este redesign.
 
 ## Deploy
 
