@@ -1,22 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apex Wash</title>
-  <meta name="description" content="Apex Wash - Lava-rápido">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Wash — Estética de estofados, colchões e automotivo</title>
+<meta name="description" content="Higienização técnica de estofados, colchões e interior automotivo. Limpeza na fibra, não só na superfície. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Apex Wash</h1>
-  </header>
-  <main>
-    <p>Site em construção.</p>
-  </main>
-  <footer>
-    <p>&copy; 2026 Apex Wash</p>
-  </footer>
-  <script src="js/main.js"></script>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="wordmark" href="#topo">Apex Wash</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menu</span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#sobre">Sobre</a>
+      <a href="#estofados">Estofados</a>
+      <a href="#colchoes">Colchões</a>
+      <a href="#automotivo">Automotivo</a>
+      <a href="#contato" class="site-nav__cta">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Estética têxtil &amp; automotiva</p>
+        <h1>Limpo na fibra,<br>não só na superfície.</h1>
+        <p class="hero__lead">
+          Higienização técnica de estofados, colchões e interior automotivo.
+          Removemos ácaros, odores e o desgaste do dia a dia — devolvendo
+          textura, cor e um ambiente mais saudável para viver e dirigir.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://wa.me/5511925444435?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Apex%20Wash." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
+          <a class="btn btn--ghost" href="#estofados">Ver serviços</a>
+        </div>
+      </div>
+      <div class="hero__signature">
+        <div class="fiber-panel" id="fiberPanel" aria-hidden="true">
+          <span class="fiber-panel__tag">passe o cursor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Excelência em cada detalhe</p>
+      <h2>Cuidado que transforma o ambiente</h2>
+      <p class="section__lead">
+        Na Apex Wash, a limpeza de estofados vai além da superfície. Cada
+        atendimento segue um protocolo técnico que devolve textura, cor e
+        um ambiente mais saudável para quem vive nele.
+      </p>
+      <div class="card-grid card-grid--3">
+        <article class="card">
+          <h3>Abordagem personalizada</h3>
+          <p>Cada tecido pede um protocolo próprio. Avaliamos fibra, cor e uso antes de qualquer produto tocar o seu estofado.</p>
+        </article>
+        <article class="card">
+          <h3>Alta performance</h3>
+          <p>Equipe em treinamento constante nas técnicas mais recentes de extração e desinfecção.</p>
+        </article>
+        <article class="card">
+          <h3>Ecossistema de saúde</h3>
+          <p>Eliminação rigorosa de agentes alergênicos, para um ambiente seguro de verdade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="estofados" class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">Estofados</p>
+      <h2>Estética de estofados</h2>
+      <p class="section__lead">
+        Sofás, poltronas e cadeiras recuperam o aspecto de novos —
+        sem agredir o material.
+      </p>
+      <div class="card-grid card-grid--2">
+        <article class="card card--accent">
+          <h3>Proteção de fibras</h3>
+          <p>Tecnologia de ponta para revitalizar cada fibra do mobiliário, sem agredir o material.</p>
+        </article>
+        <article class="card">
+          <h3>Revitalização visual</h3>
+          <p>Recuperação da cor e da textura originais através de produtos de pH balanceado.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="colchoes" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Saúde e bem-estar</p>
+      <h2>Higienização de colchões</h2>
+      <div class="card-grid card-grid--3">
+        <article class="card">
+          <h3>Eliminação de ácaros</h3>
+          <p>Tecnologia que remove 99,9% dos ácaros, fungos e bactérias. Essencial para quem tem alergias.</p>
+        </article>
+        <article class="card">
+          <h3>Remoção de odores</h3>
+          <p>Fórmulas enzimáticas que neutralizam suor e umidade, devolvendo o frescor de novo.</p>
+        </article>
+        <article class="card">
+          <h3>Preservação do sono</h3>
+          <p>Ambiente higienizado e perfumado para um sono profundo e restaurador.</p>
+        </article>
+      </div>
+      <p class="section__cta-line">
+        Sua saúde não pode esperar.
+        <a href="https://wa.me/5511925444435?text=Ol%C3%A1!%20Quero%20renovar%20meu%20colch%C3%A3o." target="_blank" rel="noopener">Renove seu colchão hoje →</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="automotivo" class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">Automotivo</p>
+      <h2>Apex Auto Detailing</h2>
+      <p class="section__lead">
+        O interior do carro é um ambiente fechado. Nossa higienização remove
+        ácaros e melhora a qualidade do ar que você respira a cada trajeto.
+      </p>
+      <p class="protocol-label">Protocolo de limpeza</p>
+      <div class="card-grid card-grid--3">
+        <article class="card card--protocol">
+          <span class="card__index">01</span>
+          <h3>Aspiração &amp; extração</h3>
+          <p>Remoção de detritos em todos os vãos e extração a vácuo de manchas profundas em bancos e carpetes.</p>
+        </article>
+        <article class="card card--protocol">
+          <span class="card__index">02</span>
+          <h3>Sanitização técnica</h3>
+          <p>Limpeza de painéis e portas sem deixar resíduos gordurosos, mantendo o aspecto original.</p>
+        </article>
+        <article class="card card--protocol">
+          <span class="card__index">03</span>
+          <h3>Hidratação de couro</h3>
+          <p>Condicionadores premium que devolvem a elasticidade e evitam rachaduras causadas pelo sol.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section section--contact">
+    <div class="wrap">
+      <h2>Fale com a Apex Wash</h2>
+      <div class="card-grid card-grid--2">
+        <article class="card contact-card">
+          <h3>WhatsApp</h3>
+          <p class="contact-card__value">(11) 92544-4435</p>
+          <a class="btn btn--primary" href="https://wa.me/5511925444435?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Apex%20Wash." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </article>
+        <article class="card contact-card">
+          <h3>E-mail</h3>
+          <p class="contact-card__value">contato.apexwash@gmail.com</p>
+          <a class="btn btn--ghost" href="mailto:contato.apexwash@gmail.com">Enviar e-mail</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span class="wordmark wordmark--footer">Apex Wash</span>
+    <p>&copy; 2026 Apex Wash — Estética têxtil e automotiva. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/5511925444435?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Apex%20Wash." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.9.529 3.68 1.447 5.194L2 22l4.925-1.412A9.94 9.94 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.166-1.14l-.299-.177-3.023.866.88-2.95-.194-.303A8.19 8.19 0 1 1 20.2 12a8.208 8.208 0 0 1-8.199 8.2z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
 </body>
 </html>
