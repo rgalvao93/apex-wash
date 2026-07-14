@@ -15,19 +15,21 @@ if (navToggle && siteNav) {
   });
 }
 
-const fiberPanel = document.getElementById('fiberPanel');
+const revealPanels = document.querySelectorAll('.mask-reveal');
 
-if (fiberPanel && matchMedia('(hover: hover)').matches) {
-  fiberPanel.addEventListener('pointermove', (event) => {
-    const rect = fiberPanel.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    fiberPanel.style.setProperty('--mx', `${x}%`);
-    fiberPanel.style.setProperty('--my', `${y}%`);
-    fiberPanel.classList.add('is-tracking');
-  });
+if (matchMedia('(hover: hover)').matches) {
+  revealPanels.forEach((panel) => {
+    panel.addEventListener('pointermove', (event) => {
+      const rect = panel.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      panel.style.setProperty('--mx', `${x}%`);
+      panel.style.setProperty('--my', `${y}%`);
+      panel.classList.add('is-tracking');
+    });
 
-  fiberPanel.addEventListener('pointerleave', () => {
-    fiberPanel.classList.remove('is-tracking');
+    panel.addEventListener('pointerleave', () => {
+      panel.classList.remove('is-tracking');
+    });
   });
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rgalvao93.github.io/apex-wash/sitemap.xml

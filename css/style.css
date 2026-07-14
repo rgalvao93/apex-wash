@@ -286,7 +286,7 @@ a {
   }
 }
 
-.fiber-panel__tag {
+.mask-reveal__tag {
   position: absolute;
   left: 16px;
   bottom: 16px;
@@ -301,9 +301,60 @@ a {
 }
 
 @media (hover: none) {
-  .fiber-panel__tag {
+  .mask-reveal__tag {
     display: none;
   }
+}
+
+/* Reveal panel (Estofados signature — same photo, cursor reveals the treated tone) */
+.reveal-panel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -20px rgba(33, 38, 43, 0.35);
+}
+
+.reveal-panel__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reveal-panel__base .reveal-panel__img {
+  filter: grayscale(1) brightness(0.8) contrast(0.92);
+}
+
+.reveal-panel__result {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: radial-gradient(circle at var(--mx) var(--my), black 0, black 90px, transparent 170px);
+          mask-image: radial-gradient(circle at var(--mx) var(--my), black 0, black 90px, transparent 170px);
+  animation: fiberSweep 9s ease-in-out infinite;
+}
+
+.reveal-panel__result .reveal-panel__img {
+  filter: saturate(1.25) contrast(1.05) brightness(1.05);
+}
+
+.reveal-panel.is-tracking .reveal-panel__result {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-panel__result {
+    animation: none;
+  }
+}
+
+.reveal-note {
+  margin-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
 }
 
 /* Sections */
@@ -364,15 +415,6 @@ a {
   padding: 28px;
 }
 
-.card--dot-blue { border-top-color: var(--blue); }
-.card--dot-gold { border-top-color: var(--gold); }
-.card--dot-green { border-top-color: var(--green); }
-
-.card--accent {
-  border-color: var(--gold);
-  border-width: 1.5px;
-}
-
 .card--protocol {
   position: relative;
 }
@@ -392,6 +434,176 @@ a {
 
 .card h3 { margin-bottom: 0.4em; }
 .card p { margin-bottom: 0; font-size: 0.96rem; }
+
+/* Sobre — editorial layout (princípios, não processo: sem grid de cards) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+  margin-top: 2.2rem;
+}
+
+.about-grid__pull {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 36ch;
+}
+
+.principle-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+}
+
+.principle-list__item {
+  position: relative;
+  padding: 22px 0 22px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.principle-list__dot {
+  position: absolute;
+  left: 0;
+  top: 29px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.principle-list__item--blue .principle-list__dot { background: var(--blue); }
+.principle-list__item--gold .principle-list__dot { background: var(--gold); }
+.principle-list__item--green .principle-list__dot { background: var(--green); }
+
+.principle-list__item h3 { font-size: 1.05rem; margin-bottom: 0.3em; }
+.principle-list__item p { margin-bottom: 0; font-size: 0.92rem; }
+
+/* Service photo (Colchões, Automotivo) */
+.service-photo {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -20px rgba(33, 38, 43, 0.35);
+}
+
+.service-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* Estofados — foto de processo + reveal, substitui grid de cards */
+.estofados-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 2.2rem;
+}
+
+.estofados-layout__captions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.estofados-layout__caption h3 { margin-bottom: 0.3em; }
+.estofados-layout__caption p { margin-bottom: 0; font-size: 0.96rem; }
+
+/* Colchões — relatório de higienização, substitui grid de cards */
+.diagnostic-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 2.2rem;
+}
+
+.hygiene-ticket {
+  background: var(--card-bg);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.hygiene-ticket__label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  margin-bottom: 1.3em;
+}
+
+.hygiene-ticket__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hygiene-ticket__list li {
+  display: flex;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+
+.hygiene-ticket__list li:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.hygiene-ticket__check {
+  flex: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--green);
+}
+
+.hygiene-ticket__list h3 { font-size: 1rem; margin-bottom: 0.25em; }
+.hygiene-ticket__list p { margin-bottom: 0; font-size: 0.92rem; }
+
+/* Automotivo — mantém protocolo 01/02/03, adiciona foto de apoio */
+.automotivo-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 2.6rem;
+}
+
+/* Prova social */
+.testimonial {
+  margin: 2.2rem 0 0;
+  max-width: 70ch;
+}
+
+.testimonial p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.testimonial__attribution {
+  display: block;
+  margin-top: 1.3em;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--ink-soft);
+}
 
 /* Contact */
 .contact-card {
@@ -463,6 +675,13 @@ a {
 
   .card-grid--2,
   .card-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid,
+  .estofados-layout,
+  .diagnostic-grid,
+  .automotivo-intro {
     grid-template-columns: 1fr;
   }
 }
