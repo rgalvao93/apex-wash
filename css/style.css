@@ -10,19 +10,20 @@
 }
 
 :root {
-  --linen: #F2ECE1;
-  --linen-tint: #EAE2D2;
-  --ink: #21262B;
-  --ink-soft: #52585F;
-  --blue: #1B6FB0;
-  --blue-bright: #2A9BE0;
-  --blue-dark: #124F80;
-  --gold: #E2960A;
-  --gold-bright: #FAAA14;
-  --red: #D6461C;
-  --green: #2F8A16;
-  --card-bg: #FBF8F2;
-  --border: rgba(33, 38, 43, 0.12);
+  --paper: #F5F9FC;
+  --mist: #E7F0F8;
+  --ink: #10273A;
+  --ink-soft: #46606F;
+  --blue: #0F6FB8;
+  --blue-bright: #45ABE6;
+  --blue-dark: #0A4E86;
+  --gold: #F2A31C;
+  --gold-bright: #FFB733;
+  --red: #E1462A;
+  --green: #2FA13B;
+  --card-bg: #FFFFFF;
+  --border: rgba(16, 39, 58, 0.12);
+  --shadow: rgba(16, 39, 58, 0.14);
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -48,7 +49,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--linen);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 1.05rem;
@@ -105,7 +106,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(242, 236, 225, 0.85);
+  background: rgba(245, 249, 252, 0.82);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -230,12 +231,96 @@ a {
 
 .btn--ghost {
   background: transparent;
-  color: var(--ink);
-  border: 1.5px dashed var(--gold);
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
 }
 
 .btn--ghost:hover {
-  background: rgba(226, 150, 10, 0.1);
+  background: rgba(15, 111, 184, 0.08);
+}
+
+/* Botão sobre foto (hero banner) */
+.btn--on-photo {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+}
+
+.btn--on-photo:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+}
+
+/* Hero banner — foto grande com o nome da empresa */
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 78vh, 760px);
+  overflow: hidden;
+}
+
+.hero-banner__media {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/img/hero-banner.jpg');
+  background-size: cover;
+  background-position: 60% center;
+}
+
+.hero-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg,
+      rgba(8, 30, 48, 0.94) 0%,
+      rgba(8, 30, 48, 0.78) 36%,
+      rgba(8, 30, 48, 0.42) 66%,
+      rgba(8, 30, 48, 0.18) 100%),
+    linear-gradient(0deg, rgba(8, 30, 48, 0.55), rgba(8, 30, 48, 0) 45%);
+}
+
+.hero-banner__inner {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 88px 24px;
+  max-width: 680px;
+}
+
+.hero-banner__eyebrow {
+  color: var(--blue-bright);
+  margin-bottom: 1.2em;
+}
+
+.hero-banner__name {
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.24em;
+}
+
+.hero-banner__tagline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0 0 0.7em;
+}
+
+.hero-banner__lead {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.1rem;
+  max-width: 48ch;
+  margin-bottom: 1.8em;
+}
+
+.hero-banner .hero__actions {
+  margin-top: 0;
 }
 
 /* Signature fiber panel */
@@ -251,10 +336,10 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   background:
-    repeating-linear-gradient(45deg, #cfc8b6 0 3px, #bdb49f 3px 6px),
-    repeating-linear-gradient(-45deg, #c4bca8 0 3px, #b3a993 3px 6px);
+    repeating-linear-gradient(45deg, #c8d2da 0 3px, #b3c1cc 3px 6px),
+    repeating-linear-gradient(-45deg, #bfcbd4 0 3px, #aab9c4 3px 6px);
   background-blend-mode: multiply;
-  box-shadow: 0 24px 48px -20px rgba(33, 38, 43, 0.35);
+  box-shadow: 0 24px 48px -20px var(--shadow);
 }
 
 .fiber-panel::after {
@@ -262,8 +347,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    repeating-linear-gradient(45deg, #2a9be0 0 3px, #1b6fb0 3px 6px),
-    repeating-linear-gradient(-45deg, #3aa9e8 0 3px, #175f96 3px 6px);
+    repeating-linear-gradient(45deg, #45abe6 0 3px, #0f6fb8 3px 6px),
+    repeating-linear-gradient(-45deg, #5bb8ea 0 3px, #0c5f9e 3px 6px);
   background-blend-mode: multiply;
   -webkit-mask-image: radial-gradient(circle at var(--mx) var(--my), black 0, black 90px, transparent 170px);
           mask-image: radial-gradient(circle at var(--mx) var(--my), black 0, black 90px, transparent 170px);
@@ -295,7 +380,7 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
-  background: rgba(33, 38, 43, 0.55);
+  background: rgba(16, 39, 58, 0.6);
   padding: 6px 12px;
   border-radius: 999px;
 }
@@ -313,7 +398,7 @@ a {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 24px 48px -20px rgba(33, 38, 43, 0.35);
+  box-shadow: 0 24px 48px -20px var(--shadow);
 }
 
 .reveal-panel__img {
@@ -363,7 +448,7 @@ a {
 }
 
 .section--tint {
-  background: var(--linen-tint);
+  background: var(--mist);
 }
 
 .section--contact {
@@ -487,7 +572,7 @@ a {
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 24px 48px -20px rgba(33, 38, 43, 0.35);
+  box-shadow: 0 24px 48px -20px var(--shadow);
 }
 
 .service-photo img {
@@ -906,7 +991,7 @@ a {
     top: 76px;
     left: 0;
     right: 0;
-    background: var(--linen);
+    background: var(--paper);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: flex-start;

@@ -41,16 +41,25 @@ Do site atual, reaproveitar **apenas os textos/conteúdo**, não o layout ou vis
 - Manter HTML semântico e acessível (facilita SEO e leitores de tela).
 - **Qualquer trabalho de design (layout, paleta, tipografia, componentes novos) deve usar a skill `frontend-design`.**
 
-## Paleta de marca
+## Paleta de marca — "Água limpa" (fria/higiênica)
 
-Extraída do logo oficial da Apex Wash (selo circular, fundo branco, texto preto):
+Ancorada no logo oficial (selo circular sobre **fundo branco**, azul dominante, quatro
+plaquinhas de ferramenta verde/âmbar/azul/vermelho). O sistema é **frio e claro** — não
+usar bege/creme quente (dá cara de site antigo e briga com o branco do logo).
 
-- Azul (cor dominante do selo e do ícone do sofá): `#1B6FB0` (uso funcional/texto), `#2A9BE0` (tom decorativo mais claro)
-- Dourado: `#E2960A` (funcional), `#FAAA14` (decorativo)
-- Vermelho: `#D6461C`
-- Verde: `#2F8A16`
+Fundo e texto (frios):
+- Papel (fundo): `#F5F9FC` · Névoa (seções alternadas, `--mist`): `#E7F0F8` · Cards: `#FFFFFF`
+- Tinta (texto): `#10273A` (navy frio) · Texto suave: `#46606F`
 
-O selo original em si (clip-art com ícones de limpeza — spray, aspirador, rodo, escova) **não deve ser usado como imagem no layout** — destoa do sistema visual mais editorial do site. Usar apenas as cores extraídas dele; o wordmark/ícone do cabeçalho é uma peça nova, desenhada para este redesign.
+Azul (cor líder — o sofá e o anel do logo):
+- `#0F6FB8` (primário: botões, links, eyebrows) · `#45ABE6` (decorativo, o anel) · `#0A4E86` (hover / faixa CTA)
+
+Acentos das quatro plaquinhas (uso pontual — passos do processo, dots de cards):
+- Verde `#2FA13B` (spray) · Âmbar `#F2A31C` (aspirador, token `--gold`) · Vermelho `#E1462A` (escova)
+
+Fonte da verdade das cores: `:root` em `css/style.css`. O selo original (clip-art) **não
+deve ser usado como imagem** no layout; o wordmark/ícone do cabeçalho é peça nova. A
+assinatura (painel de fibra) vai de **cinza opaco → azul** = "sujo → limpo".
 
 ## Deploy
 
