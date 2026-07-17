@@ -57,9 +57,12 @@ Azul (cor líder — o sofá e o anel do logo):
 Acentos das quatro plaquinhas (uso pontual — passos do processo, dots de cards):
 - Verde `#2FA13B` (spray) · Âmbar `#F2A31C` (aspirador, token `--gold`) · Vermelho `#E1462A` (escova)
 
-Fonte da verdade das cores: `:root` em `css/style.css`. O selo original (clip-art) **não
-deve ser usado como imagem** no layout; o wordmark/ícone do cabeçalho é peça nova. A
-assinatura (painel de fibra) vai de **cinza opaco → azul** = "sujo → limpo".
+Fonte da verdade das cores: `:root` em `css/style.css`. A assinatura (painel de fibra)
+vai de **cinza opaco → azul** = "sujo → limpo".
+
+O selo oficial (clip-art circular) está em `assets/img/apex-logo.jpg` e é usado como
+imagem no cabeçalho, rodapé e favicon (decisão explícita do usuário em 2026-07-17,
+substituindo o SVG genérico usado anteriormente).
 
 ## Deploy
 
